@@ -1,0 +1,29 @@
+Sure! Here's an example of a singleton class in Kotlin:
+
+```kotlin
+object Singleton {
+    init {
+        println("Singleton instance initialized")
+    }
+    
+    fun doSomething() {
+        println("Singleton is doing something")
+    }
+}
+```
+
+In this example, `Singleton` is a singleton class. The `object` keyword is used to define a singleton object in Kotlin. The `init` block is executed when the singleton instance is initialized. You can define any properties or functions inside the singleton object.
+
+To use the singleton, you can simply call its functions or access its properties like this:
+
+```kotlin
+Singleton.doSomething()
+```
+
+This will output:
+```
+Singleton instance initialized
+Singleton is doing something
+```
+
+Note that the singleton object is lazily initialized, meaning it is created when it is first accessed.

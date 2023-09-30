@@ -1,0 +1,105 @@
+What is divide and conquer in programming? Give an example from the domain of writing a chess game
+Show me the C code to start and stop a precise timer for code benchmarking.
+In C, how can I generate a random number between 1 and 100?
+In C, how can I define a Unicode string?
+In C, how can I portably access the elements of the header of a binary file like JPG?
+In portable standard ISO C++20, how do you read a *.csv file into RAM without using a library?
+In portable standard ISO C++20, how do you read a *.csv file into RAM?
+In portable standard ISO C++20, how do you read a *.csv file into RAM using the standard library or an open source library under the MIT, BSD, Apache or LGPL licenses.?
+In Python, how can I draw simple graphics using LOGO-like turtle graphics commands?
+In Python, how can I professionally render a contingency matrix that shows the performance of a binary classifier?
+In Java, how do I iterate over all keys of a hashtable?
+In Java, how can I replace all matches of a regular expression?
+In C, how can I create a 3-dimensional matrix of float objects that is safe from buffer overflow errors?
+In Julia, how can I plot a ROC curve?
+In Julia, how can I print a contingency matrix?
+In Julia, how can I define a three-dimensional matrix of floats?
+In Julia, which library provides an implementation of the Viterbi algorithm for Hidden Markov Models?
+Show me the Julia code for generating a random undirected graph.
+In Rust, how can I design functions to return errors systematically?
+In portable standard ISO C++20, how do you read a *.csv file into RAM without using a library?
+In portable standard ISO C++20, how do you read a *.csv file into RAM?
+In portable standard ISO C++20, how do you read a *.csv file into RAM using the standard library or an open source library under the MIT, BSD, Apache or LGPL licenses.?
+In Python, how can I draw simple graphics using LOGO-like turtle graphics commands?
+In Python, how can I professionally render a contingency matrix that shows the performance of a binary classifier?
+In Java, how can I implement a singleton class?
+In C, how can I create a 3-dimensional matrix of float objects that is safe from buffer overflow errors?
+In Julia, how can I view the compiled code for a function?
+In Rust, how can I design functions to return errors systematically?
+In Rust, how do I implement what would be a class in Java or C++?
+In Rust, how do I make a struct printable?
+Show me a Kotlin class for singly linked lists.
+In Rust, how do I implement what would be a class in Java or C++?
+In Rust, how do I make a struct printable?
+In Rust, which library is best for fast trie lookup in RAM?
+In Rust, which library perovides efficient B-tree storage on disk?
+In Kotlin, how does the minimum code of an Android mobile app look like?
+In Kotlin, what is the syntax for anonymous functions?
+In Swift, how does the minimum iPhone mobile app source code look like?
+Show me the minimum Android mobile app in Kotlin.
+What does this C++ code do?
+What does this Python code do?
+What does the following Python code do?
+How can I test in Python whether a CUDA GPU is present?
+Explain recursion.
+Explain the difference between transient and persistent.
+In databases, explain the ACID acronym.
+Show me an SQL query that computes aggregate statistics about a table.
+If I have an SQL table defined by ``CREATE TABLE t(...)'', how can I insert a new author only if he or she does not already exist?
+In FORTRAN 95, how can I multiply two 2x2 matrices of integers A and B?
+Can I separate a function's declaration from its implementation in FORTRAN?
+Can I separate a function's declaration from its implementation in Modula-2?
+Can I separate a function's declaration from its implementation in C++?
+Can I separate a function's declaration from its implementation in Java?
+Explain tail recursion to me.
+What is wrong in the following Python code: ... ? Explain all errors or bugs to me.
+Show me all errors or bugs in the following C function: ... How does it look like when it is corrected?
+Show me a set of C functions for creating a (singly) linked list, inserting data to a linked list, deleting an item from a linked list and freeing a linked list.
+How do you check whether a value is any one of a list of constants in Python?
+How do you check whether a value is any one of a list of constants in C++?
+How do you check whether a value is any one of a list of constants in Rust?
+How do you check whether a value is any one of a list of constants in LISP?
+How do you check whether a value is any one of a list of expressions in Python?
+How do you check whether a value is any one of a list of expressions in C++?
+How do you check whether a value is any one of a list of expressions in Rust?
+How do you check whether a value is any one of a list of expressions in LISP?
+What is the difference between StringBuffer and String in Java?
+In C++, how to I concatenate strings?
+How can I run a principle component analysis of a matrix A in FORTRAN? What is the most efficient portable library that I can call to do that?
+How to compute the standard deviation of an array in FORTRAN?
+How to compute the standard deviation of an array in JavaScript?
+How to compute the standard deviation of an array in Scheme?
+How to compute the standard deviation of an array in CommonLISP?
+How to define family relationships (father, mother, brother, sister, grandparents, aunties and uncles) in PROLOG?
+Show me the MATLAB code to compute the singular value decomposition of a matrix X.
+Show me the R code to compute the singular value decomposition of a matrix X.
+Write me a bash function to iterate through all lines in a file and call a command for each line with the string of the line as an argument.
+What is wrong with the following C code? int main() { char *s = "Hello, "; strcat(s, "World!"); puts(s); }
+How do I declare a pointer to a 3-dimensional array of floats in C?
+list the different typoes of abstraction
+what are the pros and cons of using a domain-specific language
+explain how recursion works using fibonacci as an example
+What does ACID stand for in databases and why should I care
+write a singleton class in Kotlin
+how can I pass an anonymous function to an iterator in python that goes over all list elements in a way so that it returns as the result a list of the values of the application of the anonymous function?
+How can I write a generator function in Scheme?
+Explain divide and conquer
+how do immmutable objects get declared in Rust?
+how do immmutable objects get declared in C++?
+what does volatile do in C?
+How can I wrap a function 'f' in Python for reusability?
+How can I wrap a function 'f' in Kotlin for reusability?
+Show me the code how to reuse a C++ class across multiple projects
+how can I create a vector of bits in C++
+In SQL, how can I get all employee records (table 'EMPLOYEES') with salaries (EMPLOYEE.SALARY) greater than the average salary?
+How do I declare a function local to another one in C++?
+Show me all bugs and deficiencies in this C code: void nb__net_init(void) { nb__init_timers(); nb__net_state = malloc(sizeof(nb__net_state)); nb__net_state->num_conn = 0; }
+Show me the bugs in the following code:
+Show me the bugs in the following code:
+Show me the bugs in the following code:
+Show me the bugs in the following code:
+How can I open a window in Python?
+How can I save an array to a file in Python?
+How can I load a file containing whitespace-separated integers into an array in Python?
+Write a REST service in Python for me
+Write me the code to read an email inbox from a Python script, and to pass each email's plain text to a function 'process'

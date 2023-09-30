@@ -1,0 +1,29 @@
+In C++, you can declare a function local to another function by defining the inner function inside the body of the outer function. This is known as a nested function or a local function.
+
+Here's an example:
+
+```cpp
+#include <iostream>
+
+void outerFunction()
+{
+    // Declare the inner function
+    void innerFunction()
+    {
+        std::cout << "This is the inner function." << std::endl;
+    }
+
+    // Call the inner function
+    innerFunction();
+}
+
+int main()
+{
+    outerFunction();
+    return 0;
+}
+```
+
+In this example, the `innerFunction` is declared inside the `outerFunction`. It can only be accessed within the scope of the `outerFunction`. When `outerFunction` is called, it will also call the `innerFunction` and print "This is the inner function." to the console.
+
+Note that nested functions are not part of the C++ standard, but some compilers, like GCC, support them as an extension.

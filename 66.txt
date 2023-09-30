@@ -1,0 +1,9 @@
+The main difference between StringBuffer and String in Java is that StringBuffer is mutable, meaning its value can be changed, while String is immutable, meaning its value cannot be changed once it is created.
+
+In other words, when you modify a StringBuffer object, it does not create a new object, but instead modifies the existing object. This can be useful when you need to perform a lot of string manipulation operations, as it avoids creating multiple new objects.
+
+On the other hand, when you modify a String object, it creates a new object with the modified value, leaving the original object unchanged. This can be less efficient when performing a lot of string manipulation operations, as it involves creating multiple new objects.
+
+Another difference is that StringBuffer is synchronized, which means it is thread-safe and can be used in multi-threaded environments without any issues. String, on the other hand, is not synchronized.
+
+In summary, if you need to perform a lot of string manipulation operations or if you are working in a multi-threaded environment, StringBuffer is a better choice. If you don't need to modify the string and want to ensure immutability, String is the way to go.

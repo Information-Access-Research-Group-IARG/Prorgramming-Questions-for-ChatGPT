@@ -1,0 +1,7 @@
+Transient and persistent are two terms used to describe the nature of data or information.
+
+Transient refers to data or information that is temporary and does not persist beyond a certain point in time or a specific event. Transient data is typically stored in memory and is only available for a short duration. Once the event or process is completed, the transient data is no longer needed and is discarded. Examples of transient data include variables used in a program, temporary files, or data stored in cache memory.
+
+On the other hand, persistent refers to data or information that is permanent and remains available even after the event or process that created it has ended. Persistent data is typically stored in non-volatile storage mediums such as hard drives, solid-state drives, or databases. It is designed to be retained for a long time and can be accessed and used later. Examples of persistent data include files stored on a computer's hard drive, databases that store user information, or configuration settings that persist across system reboots.
+
+In summary, the main difference between transient and persistent is that transient data is temporary and does not persist beyond a specific event or time, while persistent data is permanent and remains available even after the event or process that created it has ended.

@@ -1,0 +1,23 @@
+To open a window in Python, you can use a GUI (Graphical User Interface) library such as Tkinter, PyQt, or PySide. Here's an example using Tkinter:
+
+```python
+import tkinter as tk
+
+# Create a window
+window = tk.Tk()
+
+# Set the window title
+window.title("My Window")
+
+# Set the window size
+window.geometry("400x300")
+
+# Add widgets and functionality to the window
+
+# Start the main event loop
+window.mainloop()
+```
+
+This code creates a basic window using Tkinter. You can customize the window's title, size, and add various widgets and functionality to it. The `window.mainloop()` function starts the main event loop, which keeps the window open and handles user interactions.
+
+Note: Tkinter is included with Python, so you don't need to install any additional libraries. However, if you prefer a different GUI library, you may need to install it separately.

@@ -1,0 +1,26 @@
+Sure! Here's the R code to compute the singular value decomposition (SVD) of a matrix X:
+
+```R
+# Assuming X is your matrix
+X <- matrix(c(1, 2, 3, 4, 5, 6), nrow = 2)
+
+# Compute the SVD
+svd_result <- svd(X)
+
+# Access the singular values, left singular vectors, and right singular vectors
+singular_values <- svd_result$d
+left_singular_vectors <- svd_result$u
+right_singular_vectors <- svd_result$v
+
+# Print the results
+print("Singular Values:")
+print(singular_values)
+
+print("Left Singular Vectors:")
+print(left_singular_vectors)
+
+print("Right Singular Vectors:")
+print(right_singular_vectors)
+```
+
+Make sure to replace the values in the `X` matrix with your own data.

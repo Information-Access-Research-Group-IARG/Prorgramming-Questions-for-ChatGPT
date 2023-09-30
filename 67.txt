@@ -1,0 +1,36 @@
+In C++, you can concatenate strings using the `+` operator or the `+=` operator. Here are two examples:
+
+1. Using the `+` operator:
+```cpp
+#include <iostream>
+#include <string>
+
+int main() {
+    std::string str1 = "Hello";
+    std::string str2 = " World";
+    std::string result = str1 + str2;
+    std::cout << result << std::endl;
+    return 0;
+}
+```
+
+2. Using the `+=` operator:
+```cpp
+#include <iostream>
+#include <string>
+
+int main() {
+    std::string str1 = "Hello";
+    std::string str2 = " World";
+    str1 += str2;
+    std::cout << str1 << std::endl;
+    return 0;
+}
+```
+
+Both examples will output:
+```
+Hello World
+```
+
+Note that in C++, you can also use the `append()` function to concatenate strings.

@@ -1,0 +1,9 @@
+Recursion is a programming concept where a function calls itself to solve a problem. It is a powerful technique used to solve complex problems by breaking them down into smaller, more manageable subproblems.
+
+In a recursive function, the function repeatedly calls itself with a smaller input until it reaches a base case, which is a condition that stops the recursion. The base case is essential to prevent infinite recursion.
+
+When a function is called recursively, each recursive call creates a new instance of the function with its own set of variables. These variables are separate from the variables of the previous instances, allowing each recursive call to work independently.
+
+Recursion is commonly used in situations where a problem can be divided into smaller, similar subproblems. It is often used to solve problems involving tree structures, such as traversing a directory structure or searching through a binary tree.
+
+However, it's important to use recursion judiciously as it can consume a lot of memory and may not be the most efficient solution for every problem. It's crucial to understand the problem and design the recursive function carefully to ensure it terminates correctly and efficiently.

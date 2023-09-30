@@ -1,0 +1,73 @@
+To wrap a function in Kotlin for reusability, you can use higher-order functions or function composition.
+
+1. Higher-Order Functions:
+   - Define a higher-order function that takes the original function `f` as a parameter and returns a new function.
+   - The new function can modify the behavior of `f` or add additional functionality.
+   - Here's an example:
+
+     ```kotlin
+     fun wrapFunction(f: () -> Unit): () -> Unit {
+         return {
+             // Add additional functionality before calling the original function
+             println("Before calling function f")
+             f()
+             // Add additional functionality after calling the original function
+             println("After calling function f")
+         }
+     }
+     ```
+
+   - You can then use the `wrapFunction` to wrap any function `f`:
+
+     ```kotlin
+     fun myFunction() {
+         println("Inside myFunction")
+     }
+
+     val wrappedFunction = wrapFunction(::myFunction)
+     wrappedFunction()
+     ```
+
+     Output:
+     ```
+     Before calling function f
+     Inside myFunction
+     After calling function f
+     ```
+
+2. Function Composition:
+   - Define a new function that takes the original function `f` as a parameter and returns a new function.
+   - The new function can call `f` and modify its output or behavior.
+   - Here's an example:
+
+     ```kotlin
+     fun wrapFunction(f: () -> Unit): () -> Unit {
+         return {
+             // Add additional functionality before calling the original function
+             println("Before calling function f")
+             f()
+             // Add additional functionality after calling the original function
+             println("After calling function f")
+         }
+     }
+     ```
+
+   - You can then use the `wrapFunction` to wrap any function `f`:
+
+     ```kotlin
+     fun myFunction() {
+         println("Inside myFunction")
+     }
+
+     val wrappedFunction = wrapFunction(::myFunction)
+     wrappedFunction()
+     ```
+
+     Output:
+     ```
+     Before calling function f
+     Inside myFunction
+     After calling function f
+     ```
+
+Both higher-order functions and function composition provide ways to wrap a function in Kotlin for reusability. Choose the approach that best suits your needs and the specific requirements of your code.

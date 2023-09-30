@@ -1,0 +1,39 @@
+You can use the `turtle` module in Python to draw simple graphics using LOGO-like turtle graphics commands. Here's an example:
+
+```python
+import turtle
+
+# Create a turtle object
+t = turtle.Turtle()
+
+# Move the turtle forward by 100 units
+t.forward(100)
+
+# Rotate the turtle left by 90 degrees
+t.left(90)
+
+# Move the turtle forward by 100 units
+t.forward(100)
+
+# Rotate the turtle left by 90 degrees
+t.left(90)
+
+# Move the turtle forward by 100 units
+t.forward(100)
+
+# Rotate the turtle left by 90 degrees
+t.left(90)
+
+# Move the turtle forward by 100 units
+t.forward(100)
+
+# Hide the turtle
+t.hideturtle()
+
+# Exit the turtle graphics window when clicked
+turtle.exitonclick()
+```
+
+This code will create a turtle object, which you can use to draw various shapes and patterns by giving it commands like `forward()`, `backward()`, `left()`, `right()`, etc. You can also change the turtle's color, speed, and other attributes. The `turtle.exitonclick()` function will keep the turtle graphics window open until you click on it.
+
+You can run this code in a Python script or in a Python interactive shell to see the turtle graphics in action.

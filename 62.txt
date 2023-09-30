@@ -1,0 +1,13 @@
+You can use the `in` operator to check whether a value is any one of a list of expressions in Python. Here's an example:
+
+```python
+value = 5
+expressions = [1, 2, 3, 4, 5]
+
+if value in expressions:
+    print("Value is in the list of expressions")
+else:
+    print("Value is not in the list of expressions")
+```
+
+In this example, the `in` operator checks whether the value `5` is present in the list of expressions `[1, 2, 3, 4, 5]`. If it is, the program will print "Value is in the list of expressions". Otherwise, it will print "Value is not in the list of expressions".

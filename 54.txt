@@ -1,0 +1,9 @@
+Tail recursion is a technique used in programming where a recursive function calls itself as its last operation. In other words, the recursive call is the final action performed in the function. This is in contrast to regular recursion, where the recursive call is followed by additional operations.
+
+The key benefit of tail recursion is that it allows for efficient memory usage. When a function is called recursively, a new stack frame is created for each call, which consumes memory. In regular recursion, these stack frames accumulate until the base case is reached, potentially leading to a stack overflow if the recursion depth is too large.
+
+However, in tail recursion, the recursive call is optimized by reusing the current stack frame instead of creating a new one. This means that the function's state can be updated and passed along to the next recursive call without requiring additional memory. As a result, tail-recursive functions can be executed with constant stack space, regardless of the recursion depth.
+
+To make a recursive function tail-recursive, the recursive call must be the last operation performed in the function and its result should be immediately returned. By doing so, the compiler or interpreter can optimize the function to use tail recursion.
+
+Using tail recursion can improve the performance and efficiency of recursive algorithms, especially when dealing with large data sets or deep recursion. It allows for iterative-like execution while maintaining the simplicity and elegance of recursive programming.

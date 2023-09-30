@@ -1,0 +1,48 @@
+To create a minimum Android mobile app in Kotlin, you can follow these steps:
+
+1. Install Android Studio: Download and install Android Studio from the official website (https://developer.android.com/studio).
+
+2. Create a new project: Open Android Studio and click on "Start a new Android Studio project". Choose "Empty Activity" as the template and click "Next".
+
+3. Configure the project: Enter the project name, package name, and choose the language as Kotlin. Click "Finish" to create the project.
+
+4. Open the MainActivity.kt file: In the project structure, navigate to the "app" folder and open the "MainActivity.kt" file.
+
+5. Modify the MainActivity.kt file: Replace the existing code with the following code:
+
+```kotlin
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+    }
+}
+```
+
+6. Create the layout file: Right-click on the "res" folder in the project structure, select "New" -> "Android Resource File". Enter the file name as "activity_main" and click "OK". In the XML editor, replace the existing code with the following code:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello, Android!"
+        android:textSize="24sp" />
+
+</LinearLayout>
+```
+
+7. Build and run the app: Click on the green play button in the toolbar to build and run the app on an emulator or connected device.
+
+This will create a basic Android app in Kotlin that displays a "Hello, Android!" message on the screen.

@@ -1,0 +1,23 @@
+To compute the standard deviation of an array in Common Lisp, you can use the following steps:
+
+1. Calculate the mean (average) of the array elements.
+2. Subtract the mean from each element in the array.
+3. Square each of the differences obtained in step 2.
+4. Calculate the mean of the squared differences.
+5. Take the square root of the mean obtained in step 4.
+
+Here's an example code snippet that demonstrates how to compute the standard deviation of an array in Common Lisp:
+
+```lisp
+(defun compute-standard-deviation (array)
+  (let* ((n (length array))
+         (mean (/ (reduce #'+ array) n))
+         (squared-diffs (mapcar (lambda (x) (expt (- x mean) 2)) array))
+         (mean-squared-diffs (/ (reduce #'+ squared-diffs) n)))
+    (sqrt mean-squared-diffs)))
+
+;; Example usage:
+(compute-standard-deviation '(1 2 3 4 5)) ; Output: 1.4142135
+```
+
+In the above code, the `compute-standard-deviation` function takes an array as input and follows the steps mentioned earlier to calculate the standard deviation. The `reduce` function is used to calculate the sum of array elements, and `mapcar` is used to square the differences. Finally, the `sqrt` function is used to calculate the square root of the mean of squared differences, giving us the standard deviation.

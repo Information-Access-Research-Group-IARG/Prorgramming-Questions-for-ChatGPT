@@ -1,0 +1,67 @@
+Sure! Here's an example of a Kotlin class for a singly linked list:
+
+```kotlin
+class Node<T>(val data: T) {
+    var next: Node<T>? = null
+}
+
+class SinglyLinkedList<T> {
+    private var head: Node<T>? = null
+    private var tail: Node<T>? = null
+
+    fun isEmpty(): Boolean {
+        return head == null
+    }
+
+    fun add(data: T) {
+        val newNode = Node(data)
+        if (isEmpty()) {
+            head = newNode
+            tail = newNode
+        } else {
+            tail?.next = newNode
+            tail = newNode
+        }
+    }
+
+    fun remove(data: T) {
+        if (isEmpty()) {
+            return
+        }
+
+        if (head?.data == data) {
+            head = head?.next
+            if (head == null) {
+                tail = null
+            }
+            return
+        }
+
+        var currentNode = head
+        var prevNode: Node<T>? = null
+
+        while (currentNode != null && currentNode.data != data) {
+            prevNode = currentNode
+            currentNode = currentNode.next
+        }
+
+        if (currentNode != null) {
+            prevNode?.next = currentNode.next
+            if (currentNode == tail) {
+                tail = prevNode
+            }
+        }
+    }
+
+    fun display() {
+        var currentNode = head
+        while (currentNode != null) {
+            print("${currentNode.data} ")
+            currentNode = currentNode.next
+        }
+        println()
+    }
+}
+```
+
+You can use this class to create and manipulate singly linked lists in Kotlin.

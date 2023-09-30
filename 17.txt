@@ -1,0 +1,1 @@
+The library that provides an implementation of the Viterbi algorithm for Hidden Markov Models in Julia is the `HMMBase.jl` library.

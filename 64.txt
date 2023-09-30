@@ -1,0 +1,15 @@
+In Rust, you can use the `match` expression to check whether a value matches any one of a list of expressions. Here's an example:
+
+```rust
+fn main() {
+    let value = 5;
+
+    match value {
+        1 | 2 | 3 => println!("Value is 1, 2, or 3"),
+        4 | 5 | 6 => println!("Value is 4, 5, or 6"),
+        _ => println!("Value is not in the list"),
+    }
+}
+```
+
+In this example, the `match` expression checks the value of the `value` variable against different patterns. The `|` symbol is used to separate multiple patterns that should be treated as a single case. If the value matches any of the patterns, the corresponding code block will be executed. The `_` pattern is a catch-all pattern that matches any value not covered by the previous patterns.

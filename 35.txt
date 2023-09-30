@@ -1,0 +1,1 @@
+The `sled` library in Rust provides efficient B-tree storage on disk.

@@ -1,0 +1,24 @@
+In C++, you can use the `switch` statement to check whether a value is any one of a list of constants. Here's an example:
+
+```cpp
+int value = 5;
+
+switch (value) {
+    case 1:
+        // code to execute if value is 1
+        break;
+    case 2:
+        // code to execute if value is 2
+        break;
+    case 3:
+    case 4:
+    case 5:
+        // code to execute if value is 3, 4, or 5
+        break;
+    default:
+        // code to execute if value doesn't match any of the cases
+        break;
+}
+```
+
+In this example, the `switch` statement checks the value of the variable `value` against different cases. If the value matches any of the cases, the corresponding code block is executed. The `break` statement is used to exit the `switch` statement after executing the code for the matching case. If the value doesn't match any of the cases, the code in the `default` case is executed.

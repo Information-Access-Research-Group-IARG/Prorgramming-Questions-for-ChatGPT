@@ -1,0 +1,37 @@
+In FORTRAN 95, you can multiply two 2x2 matrices of integers A and B using the following code:
+
+```fortran
+program matrix_multiplication
+  implicit none
+  
+  integer :: A(2,2), B(2,2), C(2,2)
+  integer :: i, j, k
+  
+  ! Input matrices A and B
+  A = reshape([1, 2, 3, 4], [2, 2]) ! Replace with your own values
+  B = reshape([5, 6, 7, 8], [2, 2]) ! Replace with your own values
+  
+  ! Matrix multiplication
+  do i = 1, 2
+    do j = 1, 2
+      C(i,j) = 0
+      do k = 1, 2
+        C(i,j) = C(i,j) + A(i,k) * B(k,j)
+      end do
+    end do
+  end do
+  
+  ! Output matrix C
+  print *, "Matrix C ="
+  do i = 1, 2
+    print *, C(i,:)
+  end do
+  
+end program matrix_multiplication
+```
+
+This code defines three matrices: A, B, and C. The matrices A and B are the input matrices that you want to multiply. The matrix C will store the result of the multiplication.
+
+The code uses nested do-loops to perform the matrix multiplication. The outer two loops iterate over the rows and columns of matrix C, while the inner loop calculates the dot product of the corresponding row of matrix A and column of matrix B.
+
+Finally, the code prints the resulting matrix C. You can replace the values of matrices A and B with your own values.

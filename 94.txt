@@ -1,0 +1,3 @@
+To get all employee records with salaries greater than the average salary, you can use the following SQL query:
+
+SELECT * FROM EMPLOYEES WHERE SALARY > (SELECT AVG(SALARY) FROM EMPLOYEES);

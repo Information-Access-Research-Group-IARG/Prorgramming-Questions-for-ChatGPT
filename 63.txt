@@ -1,0 +1,11 @@
+In C++, you can use the logical OR operator (`||`) to check whether a value is any one of a list of expressions. Here's an example:
+
+```cpp
+int value = 5;
+if (value == 1 || value == 3 || value == 5) {
+    // Value is any one of 1, 3, or 5
+    // Add your code here
+}
+```
+
+In this example, the `if` statement checks whether the `value` is equal to 1, 3, or 5. If any of these conditions are true, the code inside the `if` block will be executed. You can add your own code inside the `if` block to perform the desired actions.

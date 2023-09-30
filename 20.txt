@@ -1,0 +1,51 @@
+To read a CSV file into RAM without using a library in portable standard ISO C++20, you can use the following approach:
+
+1. Open the CSV file using the `std::ifstream` class.
+2. Read the file line by line using the `std::getline` function.
+3. Split each line into individual fields using a delimiter (usually a comma).
+4. Store the fields in a data structure, such as a vector or a custom class.
+5. Close the file after reading all the lines.
+
+Here's an example code snippet that demonstrates this approach:
+
+```cpp
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <vector>
+#include <string>
+
+int main() {
+    std::ifstream file("data.csv");
+    std::vector<std::vector<std::string>> data;
+
+    std::string line;
+    while (std::getline(file, line)) {
+        std::vector<std::string> row;
+        std::stringstream ss(line);
+        std::string field;
+
+        while (std::getline(ss, field, ',')) {
+            row.push_back(field);
+        }
+
+        data.push_back(row);
+    }
+
+    file.close();
+
+    // Access the data in the vector
+    for (const auto& row : data) {
+        for (const auto& field : row) {
+            std::cout << field << " ";
+        }
+        std::cout << std::endl;
+    }
+
+    return 0;
+}
+```
+
+In this example, the CSV file "data.csv" is read line by line. Each line is split into fields using the comma delimiter. The fields are then stored in a vector of vectors, where each inner vector represents a row of the CSV file. Finally, the data is printed to the console for demonstration purposes.
+
+Note that this approach assumes that the CSV file has a consistent structure with the same number of fields in each row. If your CSV file has a different structure, you may need to modify the code accordingly.

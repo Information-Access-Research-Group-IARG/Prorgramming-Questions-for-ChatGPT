@@ -1,0 +1,20 @@
+Sure! Here's a bash function that iterates through all lines in a file and calls a command for each line with the string of the line as an argument:
+
+```bash
+function process_file() {
+    local file="$1"
+    local command="$2"
+
+    while IFS= read -r line; do
+        "$command" "$line"
+    done < "$file"
+}
+```
+
+To use this function, you can pass the file path as the first argument and the command to be executed for each line as the second argument. For example, if you have a file called "data.txt" and you want to echo each line, you can use the function like this:
+
+```bash
+process_file "data.txt" "echo"
+```
+
+This will call the `echo` command for each line in the "data.txt" file.

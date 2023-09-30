@@ -1,0 +1,27 @@
+Sure! Here's an example Julia code for generating a random undirected graph using the LightGraphs package:
+
+```julia
+using LightGraphs
+using Random
+
+function generate_random_graph(n::Int, p::Float64)
+    graph = SimpleGraph(n)
+    for i in 1:n-1
+        for j in i+1:n
+            if rand() < p
+                add_edge!(graph, i, j)
+            end
+        end
+    end
+    return graph
+end
+
+n = 10  # number of nodes
+p = 0.3  # probability of an edge between two nodes
+
+random_graph = generate_random_graph(n, p)
+```
+
+In this code, we first import the LightGraphs package and the Random module. Then, we define a function `generate_random_graph` that takes the number of nodes `n` and the probability `p` of an edge between two nodes. Inside the function, we create an empty graph using `SimpleGraph(n)`. We then iterate over all pairs of nodes and add an edge between them with probability `p` using the `add_edge!` function. Finally, we return the generated graph.
+
+You can adjust the values of `n` and `p` to generate different random graphs.

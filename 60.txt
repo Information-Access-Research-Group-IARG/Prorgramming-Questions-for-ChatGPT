@@ -1,0 +1,20 @@
+In Rust, you can use the `match` expression to check whether a value is any one of a list of constants. Here's an example:
+
+```rust
+const CONSTANT_1: u32 = 1;
+const CONSTANT_2: u32 = 2;
+const CONSTANT_3: u32 = 3;
+
+fn main() {
+    let value = 2;
+
+    match value {
+        CONSTANT_1 => println!("Value is CONSTANT_1"),
+        CONSTANT_2 => println!("Value is CONSTANT_2"),
+        CONSTANT_3 => println!("Value is CONSTANT_3"),
+        _ => println!("Value is not any of the constants"),
+    }
+}
+```
+
+In this example, we have three constants: `CONSTANT_1`, `CONSTANT_2`, and `CONSTANT_3`. We use the `match` expression to check the value of `value` against each constant. If the value matches any of the constants, the corresponding branch will be executed. If the value doesn't match any of the constants, the `_` branch will be executed as a catch-all case.

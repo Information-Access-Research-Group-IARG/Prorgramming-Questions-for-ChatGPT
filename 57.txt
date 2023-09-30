@@ -1,0 +1,108 @@
+Sure! Here's an example set of C functions for creating, inserting, deleting, and freeing a singly linked list:
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+// Structure for a node
+struct Node {
+    int data;
+    struct Node* next;
+};
+
+// Function to create a new node
+struct Node* createNode(int data) {
+    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+    if (newNode == NULL) {
+        printf("Memory allocation failed!\n");
+        exit(1);
+    }
+    newNode->data = data;
+    newNode->next = NULL;
+    return newNode;
+}
+
+// Function to insert a node at the beginning of the linked list
+void insertNode(struct Node** head, int data) {
+    struct Node* newNode = createNode(data);
+    newNode->next = *head;
+    *head = newNode;
+    printf("Node with data %d inserted successfully!\n", data);
+}
+
+// Function to delete a node from the linked list
+void deleteNode(struct Node** head, int data) {
+    struct Node* temp = *head;
+    struct Node* prev = NULL;
+
+    if (temp != NULL && temp->data == data) {
+        *head = temp->next;
+        free(temp);
+        printf("Node with data %d deleted successfully!\n", data);
+        return;
+    }
+
+    while (temp != NULL && temp->data != data) {
+        prev = temp;
+        temp = temp->next;
+    }
+
+    if (temp == NULL) {
+        printf("Node with data %d not found!\n", data);
+        return;
+    }
+
+    prev->next = temp->next;
+    free(temp);
+    printf("Node with data %d deleted successfully!\n", data);
+}
+
+// Function to free the entire linked list
+void freeLinkedList(struct Node** head) {
+    struct Node* current = *head;
+    struct Node* next;
+
+    while (current != NULL) {
+        next = current->next;
+        free(current);
+        current = next;
+    }
+
+    *head = NULL;
+    printf("Linked list freed successfully!\n");
+}
+
+// Function to print the linked list
+void printLinkedList(struct Node* head) {
+    struct Node* temp = head;
+    while (temp != NULL) {
+        printf("%d ", temp->data);
+        temp = temp->next;
+    }
+    printf("\n");
+}
+
+// Example usage
+int main() {
+    struct Node* head = NULL;
+
+    insertNode(&head, 5);
+    insertNode(&head, 10);
+    insertNode(&head, 15);
+    insertNode(&head, 20);
+
+    printf("Linked list: ");
+    printLinkedList(head);
+
+    deleteNode(&head, 10);
+
+    printf("Linked list after deletion: ");
+    printLinkedList(head);
+
+    freeLinkedList(&head);
+
+    return 0;
+}
+```
+
+This set of functions allows you to create a singly linked list, insert nodes at the beginning, delete nodes by value, and free the entire linked list. The example usage in the `main` function demonstrates how to use these functions.

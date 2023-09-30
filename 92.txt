@@ -1,0 +1,77 @@
+To reuse a C++ class across multiple projects, you can follow these steps:
+
+1. Create a header file (.h) for your class: 
+   - Define the class and its member variables and functions in the header file.
+   - Use include guards to prevent multiple inclusions of the header file.
+
+2. Create a source file (.cpp) for your class:
+   - Implement the member functions of the class in the source file.
+   - Include the header file at the top of the source file.
+
+3. Build the class as a static or dynamic library:
+   - Compile the source file into an object file (.o).
+   - Link the object file to create a library file (.a for static library or .so/.dylib for dynamic library).
+
+4. Use the library in your projects:
+   - Include the header file in your project's source files where you want to use the class.
+   - Link your project with the library file generated in step 3.
+
+Here's an example of how the code structure would look:
+
+**MyClass.h:**
+```cpp
+#ifndef MYCLASS_H
+#define MYCLASS_H
+
+class MyClass {
+public:
+    MyClass();  // constructor
+    void myFunction();  // member function
+
+private:
+    int myVariable;  // member variable
+};
+
+#endif
+```
+
+**MyClass.cpp:**
+```cpp
+#include "MyClass.h"
+
+MyClass::MyClass() {
+    // constructor implementation
+}
+
+void MyClass::myFunction() {
+    // member function implementation
+}
+```
+
+To build the library, you can use a build system like CMake or manually compile and link the files using a command like:
+
+```shell
+g++ -c MyClass.cpp -o MyClass.o
+ar rcs libMyClass.a MyClass.o
+```
+
+In your other projects, you can include the header file and link with the library:
+
+**main.cpp:**
+```cpp
+#include "MyClass.h"
+
+int main() {
+    MyClass obj;
+    obj.myFunction();
+    return 0;
+}
+```
+
+```shell
+g++ main.cpp -o main -L/path/to/library -lMyClass
+```
+
+Make sure to replace `/path/to/library` with the actual path to the directory containing the library file.
+
+By following these steps, you can reuse the `MyClass` across multiple projects by including the header file and linking with the library.

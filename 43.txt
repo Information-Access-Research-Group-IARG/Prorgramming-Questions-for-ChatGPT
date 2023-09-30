@@ -1,0 +1,12 @@
+You can test whether a CUDA GPU is present in Python by using the `torch.cuda.is_available()` function from the PyTorch library. Here's an example code snippet:
+
+```python
+import torch
+
+if torch.cuda.is_available():
+    print("CUDA GPU is available")
+else:
+    print("CUDA GPU is not available")
+```
+
+This code will check if a CUDA-enabled GPU is available on your system. If it is, it will print "CUDA GPU is available"; otherwise, it will print "CUDA GPU is not available".

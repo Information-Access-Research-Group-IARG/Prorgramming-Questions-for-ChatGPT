@@ -1,0 +1,23 @@
+To compute the standard deviation of an array in Scheme, you can follow these steps:
+
+1. Calculate the mean (average) of the array.
+2. Subtract the mean from each element in the array and square the result.
+3. Calculate the mean of the squared differences.
+4. Take the square root of the mean of the squared differences.
+
+Here's an example implementation:
+
+```scheme
+(define (mean lst)
+  (/ (apply + lst) (length lst)))
+
+(define (standard-deviation lst)
+  (let ((mean-value (mean lst)))
+    (sqrt (/ (apply + (map (lambda (x) (expt (- x mean-value) 2)) lst))
+             (length lst)))))
+
+(define my-array '(1 2 3 4 5))
+(standard-deviation my-array)
+```
+
+In this example, the `mean` function calculates the mean of the array, and the `standard-deviation` function uses the mean to calculate the standard deviation. You can replace `my-array` with your own array to compute the standard deviation.

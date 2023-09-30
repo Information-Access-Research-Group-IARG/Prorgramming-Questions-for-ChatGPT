@@ -1,0 +1,17 @@
+To define a Unicode string in C, you can use the `wchar_t` data type along with the `L` prefix before the string literal. Here's an example:
+
+```c
+#include <wchar.h>
+
+int main() {
+    wchar_t unicodeString[] = L"Hello, 世界!";
+    
+    // Rest of your code...
+    
+    return 0;
+}
+```
+
+In the above code, the `wchar_t` data type is used to represent wide characters, which can store Unicode characters. The `L` prefix before the string literal indicates that it is a wide string.
+
+Note that you may need to ensure that your compiler and environment support Unicode and have the necessary libraries and settings in place to handle Unicode strings properly.

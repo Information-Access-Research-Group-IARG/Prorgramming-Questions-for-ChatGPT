@@ -1,0 +1,15 @@
+You can use the `INSERT INTO ... SELECT` statement along with the `NOT EXISTS` condition to insert a new author only if they do not already exist in the table. Here's an example:
+
+```sql
+INSERT INTO t (author)
+SELECT 'John Doe'
+WHERE NOT EXISTS (
+    SELECT 1
+    FROM t
+    WHERE author = 'John Doe'
+);
+```
+
+In this example, the `INSERT INTO ... SELECT` statement is used to insert the author 'John Doe' into the table `t`. The `WHERE NOT EXISTS` condition checks if there is no existing record in the table with the same author name. If the condition is true, the new author will be inserted; otherwise, nothing will be inserted.
+
+You can replace 'John Doe' with the actual author name you want to insert.

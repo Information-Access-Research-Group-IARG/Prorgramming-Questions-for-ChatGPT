@@ -1,0 +1,31 @@
+To wrap a function in Python for reusability, you can use the concept of decorators. Decorators allow you to modify the behavior of a function without changing its source code. Here's an example of how you can wrap a function:
+
+```python
+def decorator_function(original_function):
+    def wrapper_function(*args, **kwargs):
+        # Code to be executed before the original function
+        print("Before the function is called")
+
+        # Call the original function
+        result = original_function(*args, **kwargs)
+
+        # Code to be executed after the original function
+        print("After the function is called")
+
+        return result
+
+    return wrapper_function
+
+@decorator_function
+def my_function():
+    print("Inside the original function")
+
+# Call the wrapped function
+my_function()
+```
+
+In this example, the `decorator_function` is defined to wrap the `my_function`. The `wrapper_function` is the actual wrapper that executes the code before and after calling the original function. The `*args` and `**kwargs` allow the wrapper to accept any number of positional and keyword arguments.
+
+By using the `@decorator_function` syntax above the `my_function` definition, you apply the decorator to the function. When you call `my_function()`, it will execute the code in the wrapper function before and after the original function.
+
+You can modify the wrapper function to suit your specific needs, such as adding additional functionality or modifying the arguments passed to the original function.

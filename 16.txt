@@ -1,0 +1,15 @@
+In Julia, you can define a three-dimensional matrix of floats using the `Array` type. Here's an example:
+
+```julia
+# Create a 3x3x3 matrix of floats
+matrix = Array{Float64}(undef, 3, 3, 3)
+
+# Accessing elements
+matrix[1, 2, 3] = 1.5
+element = matrix[1, 2, 3]
+
+# Printing the matrix
+println(matrix)
+```
+
+This will create a 3x3x3 matrix of `Float64` (64-bit floating-point) values. You can access and modify individual elements using indexing, just like with a regular matrix.

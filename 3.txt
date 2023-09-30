@@ -1,0 +1,25 @@
+To generate a random number between 1 and 100 in C, you can use the `rand()` function from the `<stdlib.h>` library. Here's an example code snippet:
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    // Set the seed for the random number generator
+    srand(time(NULL));
+
+    // Generate a random number between 1 and 100
+    int randomNumber = rand() % 100 + 1;
+
+    printf("Random number between 1 and 100: %d\n", randomNumber);
+
+    return 0;
+}
+```
+
+In this code, `srand(time(NULL))` sets the seed for the random number generator based on the current time. This ensures that each time you run the program, you get a different sequence of random numbers.
+
+`rand() % 100 + 1` generates a random number between 0 and 99 using the `rand()` function, and then adds 1 to the result to get a number between 1 and 100.
+
+Finally, the generated random number is printed using `printf()`.

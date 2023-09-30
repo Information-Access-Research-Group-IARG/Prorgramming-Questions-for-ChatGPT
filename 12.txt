@@ -1,0 +1,18 @@
+In Java, you can use the `replaceAll()` method from the `String` class to replace all matches of a regular expression. Here's an example:
+
+```java
+String input = "Hello, World!";
+String regex = "[aeiou]";
+String replacement = "*";
+
+String output = input.replaceAll(regex, replacement);
+System.out.println(output);
+```
+
+This will replace all occurrences of vowels (a, e, i, o, u) in the input string with the asterisk symbol. The output will be:
+
+```
+H*ll*, W*rld!
+```
+
+You can modify the regular expression and replacement string according to your specific needs.

@@ -1,0 +1,8 @@
+Divide and conquer is a problem-solving technique that involves breaking down a complex problem into smaller, more manageable subproblems, solving them independently, and then combining the solutions to solve the original problem. 
+
+The process typically involves three steps: 
+1. Divide: The original problem is divided into smaller subproblems that are similar to the original problem but easier to solve. This step continues recursively until the subproblems become simple enough to be solved directly.
+2. Conquer: The subproblems are solved independently, usually using the same divide and conquer technique. This step involves solving the base cases or smallest subproblems.
+3. Combine: The solutions of the subproblems are combined to obtain the solution for the original problem. This step involves merging or aggregating the solutions obtained from the conquer step.
+
+By breaking down a complex problem into smaller, more manageable subproblems, divide and conquer allows for easier problem-solving and can often lead to more efficient algorithms. It is commonly used in various algorithms and data structures, such as sorting algorithms (e.g., merge sort, quicksort), searching algorithms (e.g., binary search), and tree-based data structures (e.g., binary search trees).

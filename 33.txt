@@ -1,0 +1,53 @@
+To make a struct printable in Rust, you can implement the `std::fmt::Display` trait or the `std::fmt::Debug` trait for the struct. 
+
+Here's an example of implementing the `Display` trait for a struct:
+
+```rust
+struct MyStruct {
+    field1: i32,
+    field2: String,
+}
+
+impl std::fmt::Display for MyStruct {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        write!(f, "MyStruct {{ field1: {}, field2: {} }}", self.field1, self.field2)
+    }
+}
+```
+
+With this implementation, you can use the `println!` macro or any other formatting macros to print an instance of `MyStruct`:
+
+```rust
+fn main() {
+    let my_struct = MyStruct {
+        field1: 42,
+        field2: String::from("Hello, world!"),
+    };
+
+    println!("{}", my_struct);
+}
+```
+
+This will output:
+
+```
+MyStruct { field1: 42, field2: Hello, world! }
+```
+
+Alternatively, you can implement the `Debug` trait instead of `Display` to get a different formatting when using the `println!` macro:
+
+```rust
+impl std::fmt::Debug for MyStruct {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        write!(f, "MyStruct {{ field1: {}, field2: {} }}", self.field1, self.field2)
+    }
+}
+```
+
+In this case, the `println!` macro would output:
+
+```
+MyStruct { field1: 42, field2: "Hello, world!" }
+```
+
+Both `Display` and `Debug` traits can be useful depending on your specific needs.

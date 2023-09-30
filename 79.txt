@@ -1,0 +1,15 @@
+There are several types of abstraction in computer science:
+
+1. Data Abstraction: It refers to the process of hiding the implementation details of data structures and exposing only the essential features to the user. This allows users to interact with the data without needing to know how it is stored or manipulated internally.
+
+2. Procedural Abstraction: It involves breaking down a complex procedure or algorithm into smaller, more manageable sub-procedures or functions. This allows for modular programming and code reusability.
+
+3. Control Abstraction: It involves hiding the details of control flow structures, such as loops and conditionals, and providing higher-level constructs for controlling program execution. Examples include functions, methods, and control structures like if-else statements and for loops.
+
+4. Encapsulation: It is a form of abstraction that combines data and methods into a single unit called an object. Encapsulation allows for information hiding, where the internal state of an object is hidden from the outside world, and only specific methods are exposed for interacting with the object.
+
+5. Hierarchical Abstraction: It involves organizing complex systems or structures into a hierarchy of smaller, more manageable components. Each component at a higher level of the hierarchy abstracts away the details of its sub-components, providing a higher-level view of the system.
+
+6. Modular Abstraction: It involves dividing a system into separate modules or components, each responsible for a specific functionality. Each module can be developed and tested independently, promoting code reusability and maintainability.
+
+These are some of the common types of abstraction used in computer science to simplify complex systems and make them easier to understand and work with.

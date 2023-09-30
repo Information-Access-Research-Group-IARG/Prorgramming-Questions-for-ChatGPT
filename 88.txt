@@ -1,0 +1,7 @@
+In C++, objects can be declared as `const` to make them immutable. When an object is declared as `const`, its value cannot be modified after initialization. This ensures that the object remains constant throughout its lifetime. To declare an immutable object in C++, you can use the `const` keyword before the object's type. For example:
+
+```cpp
+const int myNumber = 10;
+```
+
+In this example, `myNumber` is declared as a constant integer with an initial value of 10. Once initialized, you cannot modify the value of `myNumber`.

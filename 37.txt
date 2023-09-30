@@ -1,0 +1,21 @@
+In Kotlin, the syntax for anonymous functions is as follows:
+
+```
+val functionName = fun(parameters): returnType {
+    // function body
+}
+```
+
+For example, here's an anonymous function that takes two integers as parameters and returns their sum:
+
+```
+val sum = fun(a: Int, b: Int): Int {
+    return a + b
+}
+```
+
+You can then call the anonymous function like any other function:
+
+```
+val result = sum(3, 5) // result will be 8
+```

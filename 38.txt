@@ -1,0 +1,20 @@
+In Swift, the minimum iPhone mobile app source code typically consists of the following:
+
+```swift
+import UIKit
+
+class ViewController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Additional setup code can be added here
+    }
+}
+
+let appDelegate = UIApplication.shared.delegate as! AppDelegate
+appDelegate.window?.rootViewController = ViewController()
+UIApplicationMain(CommandLine.argc, CommandLine.unsafeArgv, nil, NSStringFromClass(AppDelegate.self))
+```
+
+This code sets up a basic view controller (`ViewController`) and assigns it as the root view controller for the app's window. The `ViewController` class can be customized with additional code to define the app's behavior and user interface.
+
+Note: This is a simplified example and does not include all the necessary code for a complete app. It assumes you have already set up the necessary project structure and dependencies.

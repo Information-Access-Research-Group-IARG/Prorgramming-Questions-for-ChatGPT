@@ -1,0 +1,50 @@
+To read a *.csv file into RAM using portable standard ISO C++20, you can use the following steps:
+
+1. Include the necessary headers:
+```cpp
+#include <fstream>
+#include <iostream>
+#include <sstream>
+#include <string>
+#include <vector>
+```
+
+2. Define a struct or class to represent each row of the CSV file. This will depend on the structure of your CSV file. For example, if your CSV file has columns "name", "age", and "city", you can define a struct like this:
+```cpp
+struct Person {
+    std::string name;
+    int age;
+    std::string city;
+};
+```
+
+3. Create a function to read the CSV file and store its contents in a vector of structs. Here's an example function:
+```cpp
+std::vector<Person> readCSV(const std::string& filename) {
+    std::vector<Person> data;
+    std::ifstream file(filename);
+    std::string line;
+
+    while (std::getline(file, line)) {
+        std::istringstream iss(line);
+        std::string name, age, city;
+
+        if (std::getline(iss, name, ',') &&
+            std::getline(iss, age, ',') &&
+            std::getline(iss, city)) {
+            data.push_back({name, std::stoi(age), city});
+        }
+    }
+
+    return data;
+}
+```
+
+4. Call the `readCSV` function with the filename of your CSV file to read its contents into RAM. For example:
+```cpp
+std::vector<Person> csvData = readCSV("data.csv");
+```
+
+Make sure to replace "data.csv" with the actual filename of your CSV file.
+
+Note: This code assumes that the CSV file has no header row and each row has three columns: name, age, and city. You may need to modify the code according to the structure of your CSV file.

@@ -1,0 +1,7 @@
+In Rust, immutable objects are declared using the `let` keyword followed by the variable name, a colon, and the type of the object. To make the object immutable, you add the `const` keyword before the variable name. Here's an example:
+
+```rust
+const MY_CONSTANT: u32 = 42;
+```
+
+In this example, `MY_CONSTANT` is declared as an immutable object of type `u32` with a value of `42`. Once declared as `const`, the value of the object cannot be changed throughout the program.

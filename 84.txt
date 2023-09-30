@@ -1,0 +1,19 @@
+You can use the `map()` function in Python to achieve this. Here's an example:
+
+```python
+my_list = [1, 2, 3, 4, 5]
+
+result = list(map(lambda x: x * 2, my_list))
+
+print(result)
+```
+
+In this example, the anonymous function `lambda x: x * 2` is passed as the first argument to the `map()` function. This function multiplies each element of `my_list` by 2. The `map()` function applies this function to each element of the list and returns an iterator. By converting the iterator to a list using `list()`, you get a list of the values of the application of the anonymous function.
+
+The output of the above code will be:
+
+```
+[2, 4, 6, 8, 10]
+```
+
+You can replace `lambda x: x * 2` with any other anonymous function that suits your needs.

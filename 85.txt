@@ -1,0 +1,16 @@
+To write a generator function in Scheme, you can use the `yield` keyword along with a helper function. Here's an example:
+
+```scheme
+(define (generator)
+  (define (helper n)
+    (if (<= n 0)
+        '()
+        (cons n (helper (- n 1)))))
+  (helper 10))
+
+(generator)
+```
+
+In this example, the `generator` function defines a helper function called `helper` that takes an argument `n`. The `helper` function uses recursion to generate a list of numbers from `n` down to 1. The `yield` keyword is not available in Scheme, so we use recursion to generate the values instead.
+
+When you call `(generator)`, it will return a list of numbers from 10 down to 1: `(10 9 8 7 6 5 4 3 2 1)`. You can modify the `helper` function to generate different sequences based on your requirements.

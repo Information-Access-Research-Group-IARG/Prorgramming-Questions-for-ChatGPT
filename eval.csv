@@ -1,0 +1,107 @@
+2,
+2,
+2,
+1,
+1,https://docs.fileformat.com/image/jpeg/
+2,
+to do,
+1,#include <sstream>.
+2,
+to do,
+2,
+2,
+1,"code correct, but added wrong advice about safety from buffer overflow errors"
+2,
+2,
+2,
+2,
+2,
+2,
+1,"code okay, but no error handling (for wrong format, file not found etc.)"
+1,"code okay, but no error handling (for wrong format, file not found etc.)"
+1,"code okay, but no error handling (for wrong format, file not found etc.)"
+2,
+2,
+2,
+1,"code okay, but no error handling (for out of memory error)"
+2,
+2,
+2,
+2,
+1,search function for linked lists missing (that is kind of the main use)
+2,duplicate question?
+2,duplicate question?
+2,
+2,
+2,
+0,https://stackoverflow.com/questions/68704831/kotlin-anonymous-functions-defined-using-fun-keyword
+2,
+2,duplicate question?
+to do,
+to do,
+to do,
+2,
+2,
+2,
+2,
+2,
+2,
+2,
+to do,
+to do,
+to do,
+to do,
+2,
+to do,
+to do,
+1,"duplicate? (linked list) – missing error handling (partially – null pointer not checked, but out of memory checked); search function missing"
+2,
+2,
+2,
+2,
+2,duplicate question?
+2,
+2,
+2,duplicate question?
+2,duplicate question?
+2,
+2,
+2,
+2,
+2,
+2,duplicate question?
+2,
+2,
+2,
+2,
+2,
+2,
+1,forgot metalinguistic abstraction
+2,
+2,
+2,duplicate question?
+2,
+2,
+2,
+2,
+1,model is confused between let and const
+2,
+2,
+1,"no general answer, but good intro to wrappers in Python"
+1,no general answer but good intro to two ways of reusing in Kotlin
+2,
+2,
+2,
+1,
+1,one error (missing *) is fixed but is not mentioned in the list of errors!
+to do,
+to do,
+to do,
+to do,
+2,
+1,"code okay, but write error/disk full error not handled"
+1,code okay but file not found error not handled
+2,
+to do,Average:
+158,"1,7752808988764"
+'(Sum),

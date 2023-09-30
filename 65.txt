@@ -1,0 +1,10 @@
+In LISP, you can use the `member` function to check whether a value is any one of a list of expressions. The `member` function takes two arguments: the value you want to check and the list of expressions. It returns the sublist starting with the first occurrence of the value in the list, or `nil` if the value is not found.
+
+Here's an example:
+
+```lisp
+(member 'a '(b c d a e))  ; Returns (a e)
+(member 'x '(b c d a e))  ; Returns nil
+```
+
+In the first example, the value `'a'` is found in the list `(b c d a e)`, so `(a e)` is returned. In the second example, the value `'x'` is not found in the list, so `nil` is returned.

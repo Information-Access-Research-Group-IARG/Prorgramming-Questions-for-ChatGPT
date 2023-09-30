@@ -1,0 +1,61 @@
+In Kotlin, the minimum code for an Android mobile app typically consists of the following components:
+
+1. MainActivity.kt: This is the main entry point of the app. It is responsible for handling user interactions and managing the app's lifecycle. Here's an example of a basic MainActivity:
+
+```kotlin
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+    }
+}
+```
+
+2. activity_main.xml: This is the layout file for the main activity. It defines the user interface of the app. Here's an example of a basic activity_main.xml:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello, World!" />
+
+</LinearLayout>
+```
+
+3. AndroidManifest.xml: This is the manifest file that describes essential information about the app to the Android system. It includes details such as the app's package name, permissions, and declared activities. Here's an example of a basic AndroidManifest.xml:
+
+```xml
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.myapp">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
+```
+
+These are the minimum components required to create a basic Android mobile app using Kotlin. Keep in mind that this is just a starting point, and you can add more functionality and features to your app as needed.

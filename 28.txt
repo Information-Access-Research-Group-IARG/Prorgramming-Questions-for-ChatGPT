@@ -1,0 +1,46 @@
+In Rust, you can design functions to return errors systematically by using the `Result` type. The `Result` type is an enum that represents either a successful value (`Ok`) or an error (`Err`).
+
+To design functions that return errors systematically, you can define the return type of the function as `Result<T, E>`, where `T` is the type of the successful value and `E` is the type of the error.
+
+Here's an example of a function that returns a `Result`:
+
+```rust
+fn divide(x: i32, y: i32) -> Result<i32, String> {
+    if y == 0 {
+        Err("Cannot divide by zero".to_string())
+    } else {
+        Ok(x / y)
+    }
+}
+```
+
+In this example, the `divide` function takes two `i32` arguments and returns a `Result<i32, String>`. If the second argument `y` is zero, it returns an `Err` variant with an error message. Otherwise, it returns an `Ok` variant with the result of the division.
+
+To handle the returned `Result`, you can use the `match` expression or the `?` operator for error propagation. Here's an example:
+
+```rust
+fn main() {
+    let result = divide(10, 2);
+    
+    match result {
+        Ok(value) => println!("Result: {}", value),
+        Err(error) => println!("Error: {}", error),
+    }
+}
+```
+
+In this example, the `match` expression is used to handle the `Result`. If the `Result` is `Ok`, it prints the result value. If the `Result` is `Err`, it prints the error message.
+
+Alternatively, you can use the `?` operator for error propagation. Here's an example:
+
+```rust
+fn main() -> Result<(), String> {
+    let result = divide(10, 0)?;
+    println!("Result: {}", result);
+    Ok(())
+}
+```
+
+In this example, the `?` operator is used to propagate the error. If the `divide` function returns an `Err`, the error will be propagated to the caller of the `main` function.
+
+By using the `Result` type and appropriate error handling, you can design functions to return errors systematically in Rust.

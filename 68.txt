@@ -1,0 +1,25 @@
+To perform a principal component analysis (PCA) of a matrix A in FORTRAN, you can use the LAPACK library. LAPACK (Linear Algebra PACKage) is a widely used library for numerical linear algebra computations.
+
+Here are the steps to run a PCA using LAPACK in FORTRAN:
+
+1. Make sure you have LAPACK installed on your system. If not, you can download and install it from the official LAPACK website.
+
+2. Include the LAPACK library in your FORTRAN program by adding the following line at the beginning of your code:
+   ```fortran
+   include 'lapack.f'
+   ```
+
+3. Declare the necessary variables for the PCA computation, such as the input matrix A, the output eigenvalues and eigenvectors, and other required variables.
+
+4. Call the LAPACK routine `DGESVD` to compute the singular value decomposition (SVD) of matrix A. The SVD is closely related to PCA and can be used to compute the principal components. The `DGESVD` routine computes the singular value decomposition of a general rectangular matrix.
+
+   Here's an example of how to call the `DGESVD` routine:
+   ```fortran
+   call DGESVD('A', 'A', m, n, A, lda, S, U, ldu, VT, ldvt, work, lwork, info)
+   ```
+
+   In the above example, `m` and `n` are the dimensions of matrix A, `A` is the input matrix, `S` is the output singular values, `U` is the output left singular vectors, `VT` is the output right singular vectors, and `work` is a workspace array. The other parameters are integers specifying the leading dimensions of the arrays.
+
+5. After calling `DGESVD`, you can use the computed singular values and singular vectors to perform PCA. The principal components are given by the columns of the matrix `VT`.
+
+Regarding the most efficient portable library for PCA in FORTRAN, LAPACK is a highly efficient and widely used library for numerical linear algebra computations. It is portable and available on various platforms. Therefore, LAPACK is a good choice for performing PCA in FORTRAN.

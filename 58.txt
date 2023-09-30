@@ -1,0 +1,13 @@
+To check whether a value is any one of a list of constants in Python, you can use the `in` operator. Here's an example:
+
+```python
+value = 5
+constants = [1, 2, 3, 4, 5]
+
+if value in constants:
+    print("Value is one of the constants.")
+else:
+    print("Value is not one of the constants.")
+```
+
+In this example, the `in` operator checks if the `value` is present in the `constants` list. If it is, the program prints "Value is one of the constants." Otherwise, it prints "Value is not one of the constants."

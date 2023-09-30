@@ -1,0 +1,22 @@
+To iterate over all keys of a Hashtable in Java, you can use the `keySet()` method to obtain a Set of all keys, and then iterate over this set using a for-each loop or an iterator. Here's an example:
+
+```java
+import java.util.Hashtable;
+import java.util.Set;
+
+public class Main {
+    public static void main(String[] args) {
+        Hashtable<String, Integer> hashtable = new Hashtable<>();
+        hashtable.put("key1", 1);
+        hashtable.put("key2", 2);
+        hashtable.put("key3", 3);
+
+        Set<String> keys = hashtable.keySet();
+        for (String key : keys) {
+            System.out.println(key);
+        }
+    }
+}
+```
+
+In this example, we create a Hashtable and add some key-value pairs. Then, we obtain a Set of all keys using the `keySet()` method. Finally, we iterate over the keys using a for-each loop and print each key.

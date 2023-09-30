@@ -1,0 +1,22 @@
+Sure! Here's the MATLAB code to compute the singular value decomposition (SVD) of a matrix X:
+
+```matlab
+X = [1 2 3; 4 5 6; 7 8 9]; % Replace this with your matrix
+
+[U, S, V] = svd(X);
+
+% U contains the left singular vectors
+% S contains the singular values
+% V contains the right singular vectors
+
+disp('Left singular vectors (U):');
+disp(U);
+
+disp('Singular values (S):');
+disp(S);
+
+disp('Right singular vectors (V):');
+disp(V);
+```
+
+Make sure to replace the `X` matrix with your own matrix.

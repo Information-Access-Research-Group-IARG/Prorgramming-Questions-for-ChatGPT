@@ -1,0 +1,12 @@
+Sure! Here's an example SQL query that computes aggregate statistics about a table:
+
+```
+SELECT COUNT(*) AS total_rows,
+       MIN(column_name) AS min_value,
+       MAX(column_name) AS max_value,
+       AVG(column_name) AS average_value,
+       SUM(column_name) AS sum_value
+FROM table_name;
+```
+
+Replace `table_name` with the name of your table, and `column_name` with the name of the column you want to compute statistics for. This query will return the total number of rows in the table, the minimum value in the specified column, the maximum value in the specified column, the average value in the specified column, and the sum of all values in the specified column.

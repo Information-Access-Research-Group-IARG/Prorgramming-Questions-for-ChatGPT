@@ -1,0 +1,17 @@
+To print a contingency matrix in Julia, you can use the `contingency` function from the `StatsBase` package. Here's an example:
+
+```julia
+using StatsBase
+
+# Example data
+actual = [1, 2, 1, 2, 1]
+predicted = [1, 1, 2, 2, 1]
+
+# Compute the contingency matrix
+cm = contingency(actual, predicted)
+
+# Print the contingency matrix
+println(cm)
+```
+
+This will output the contingency matrix, which shows the counts of the different combinations of actual and predicted values.

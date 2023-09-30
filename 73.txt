@@ -1,0 +1,29 @@
+In PROLOG, you can define family relationships using facts and rules. Here's an example of how you can define family relationships for father, mother, brother, sister, grandparents, aunties, and uncles:
+
+```prolog
+% Facts
+father(john, jim). % John is the father of Jim
+father(john, lisa). % John is the father of Lisa
+mother(lisa, anna). % Lisa is the mother of Anna
+mother(lisa, david). % Lisa is the mother of David
+
+% Rules
+parent(X, Y) :- father(X, Y). % X is the parent of Y if X is the father of Y
+parent(X, Y) :- mother(X, Y). % X is the parent of Y if X is the mother of Y
+
+sibling(X, Y) :- parent(Z, X), parent(Z, Y), X \= Y. % X and Y are siblings if they have the same parent and are not the same person
+
+grandparent(X, Y) :- parent(X, Z), parent(Z, Y). % X is the grandparent of Y if X is the parent of Z and Z is the parent of Y
+
+% Examples
+?- father(john, jim). % Query to check if John is the father of Jim
+Yes. % Output: Yes, John is the father of Jim
+
+?- sibling(jim, lisa). % Query to check if Jim and Lisa are siblings
+No. % Output: No, Jim and Lisa are not siblings
+
+?- grandparent(john, anna). % Query to check if John is the grandparent of Anna
+Yes. % Output: Yes, John is the grandparent of Anna
+```
+
+You can add more facts and rules to define additional family relationships as needed.
